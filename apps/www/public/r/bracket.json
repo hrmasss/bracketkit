@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bracket",
+  "type": "registry:ui",
+  "title": "Bracket",
+  "description": "A headless, pure-CSS tournament bracket styled with shadcn tokens. Renders correctly in Safari/WebKit (no SVG) — built on bracketkit.",
+  "dependencies": [
+    "bracketkit"
+  ],
+  "files": [
+    {
+      "path": "ui/bracket.tsx",
+      "type": "registry:ui",
+      "content": "\"use client\"\n\nimport { Bracket as BracketKit, type BracketRound } from \"bracketkit\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport type BracketTeam = {\n  name: string\n  score?: number | string\n  winner?: boolean\n} | null\n\nexport type BracketGame = {\n  id: string | number\n  home: BracketTeam\n  away: BracketTeam\n}\n\nfunction TeamRow({ team }: { team: BracketTeam }) {\n  return (\n    <div\n      className={cn(\n        \"flex items-center justify-between gap-2 rounded-md px-2 py-1.5 text-sm\",\n        team?.winner\n          ? \"bg-primary/10 text-primary font-semibold\"\n          : \"text-foreground\"\n      )}\n    >\n      <span className=\"truncate\">{team?.name ?? \"TBD\"}</span>\n      <span className=\"text-muted-foreground tabular-nums\">\n        {team?.score ?? \"–\"}\n      </span>\n    </div>\n  )\n}\n\nexport function Bracket({\n  rounds,\n  className,\n  ...props\n}: {\n  rounds: BracketRound<BracketGame>[]\n  className?: string\n  matchWidth?: number\n  connectorWidth?: number\n}) {\n  return (\n    // `text-border` makes the connectors (which inherit currentColor) use your\n    // theme's border color. Override with --bracket-connector-color if you like.\n    <div className={cn(\"text-border overflow-x-auto\", className)}>\n      <BracketKit\n        rounds={rounds}\n        renderRoundHeader={(round) => (\n          <div className=\"text-muted-foreground bg-muted/50 mb-2 rounded-md py-1 text-center text-xs font-semibold tracking-wide uppercase\">\n            {round.name}\n          </div>\n        )}\n        renderMatch={(game) => (\n          <div className=\"bg-card rounded-lg border p-1 shadow-sm\">\n            <TeamRow team={game.home} />\n            <TeamRow team={game.away} />\n          </div>\n        )}\n        {...props}\n      />\n    </div>\n  )\n}\n"
+    }
+  ]
+}

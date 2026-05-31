@@ -11,6 +11,8 @@ No SVG. No `foreignObject`. No runtime dependencies. ~4&nbsp;KB. SSR-safe. Style
 [![types](https://img.shields.io/npm/types/bracketkit.svg)](https://www.npmjs.com/package/bracketkit)
 [![license](https://img.shields.io/npm/l/bracketkit.svg)](./LICENSE)
 
+**[🔗 Live demo & docs](https://hrmasss.github.io/bracketkit/)**
+
 </div>
 
 ## The problem
@@ -59,7 +61,7 @@ npm i bracketkit
 Prefer the **shadcn/ui** workflow? Install a styled, copy-into-your-repo component (you own the code):
 
 ```bash
-npx shadcn@latest add https://bracketkit.dev/r/bracket.json
+npx shadcn@latest add https://hrmasss.github.io/bracketkit/r/bracket.json
 ```
 
 ## Quick start
