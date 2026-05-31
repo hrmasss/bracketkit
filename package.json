@@ -1,0 +1,14 @@
+{
+  "name": "bracketkit-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "pnpm --filter bracketkit build",
+    "dev": "pnpm --filter bracketkit dev",
+    "typecheck": "pnpm -r typecheck"
+  }
+}
