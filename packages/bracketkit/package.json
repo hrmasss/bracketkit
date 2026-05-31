@@ -1,6 +1,6 @@
 {
   "name": "bracketkit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Headless, pure-CSS React tournament bracket that renders correctly in Safari/WebKit — no SVG, no foreignObject. SSR-safe, zero runtime dependencies, fully themeable.",
   "keywords": [
     "react",

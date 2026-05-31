@@ -6,10 +6,10 @@
 
 No SVG. No `foreignObject`. No runtime dependencies. ~4&nbsp;KB. SSR-safe. Style it any way you like.
 
-[![npm](https://img.shields.io/npm/v/bracketkit.svg)](https://www.npmjs.com/package/bracketkit)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/bracketkit)](https://bundlephobia.com/package/bracketkit)
-[![types](https://img.shields.io/npm/types/bracketkit.svg)](https://www.npmjs.com/package/bracketkit)
-[![license](https://img.shields.io/npm/l/bracketkit.svg)](./LICENSE)
+[![npm](https://img.shields.io/npm/v/bracketkit?color=6c5ce7&label=npm)](https://www.npmjs.com/package/bracketkit)
+[![min+gzip](https://img.shields.io/badge/min%2Bgzip-~4%20kB-22c55e)](https://bundlephobia.com/package/bracketkit)
+[![TypeScript](https://img.shields.io/badge/TypeScript-ready-3178c6)](https://www.npmjs.com/package/bracketkit)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 
 **[🔗 Live demo & docs](https://hrmasss.github.io/bracketkit/)**
 
